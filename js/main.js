@@ -50,7 +50,7 @@ if (tickerElem) {
         gap: 12,
         perView: getTickersPerView(),
         bound: true,
-        //autoplay: 3000,
+        autoplay: 3000,
         animationDuration: 1000,
     }).mount();
 }
