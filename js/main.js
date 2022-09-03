@@ -70,12 +70,39 @@ const filterBtn = document.querySelector('.filter-btn');
 const closePopup = document.querySelector('.popup__close');
 const overlay = document.querySelector('.overlay');
 
-filterBtn.addEventListener('click', () => {
-    overlay.classList.remove('visually-hidden');
-    document.body.classList.add('no-scroll');
-});
+if (filterBtn) {
+    filterBtn.addEventListener('click', () => {
+        overlay.classList.remove('visually-hidden');
+        document.body.classList.add('no-scroll');
+    });
+}
 
-closePopup.addEventListener('click', () => {
-    overlay.classList.add('visually-hidden');
-    document.body.classList.remove('no-scroll');
-});
+if (closePopup) {
+    closePopup.addEventListener('click', () => {
+        overlay.classList.add('visually-hidden');
+        document.body.classList.remove('no-scroll');
+    });
+}
+
+const versusItems = document.querySelectorAll('.versus-menu__item');
+const versusBtns = document.querySelectorAll('.versus-menu__btn');
+const versusBlocks = document.querySelectorAll('.versus__content');
+
+if (versusBtns.length) {
+    versusBtns.forEach((btn) => {
+        btn.addEventListener('click', (event) => {
+            const currentBtn = event.currentTarget;
+
+            if (!currentBtn.parentElement.classList.contains('active')) {
+                const btnIndex = Array.from(versusBtns).indexOf(currentBtn);
+
+                versusItems.forEach(item => item.classList.remove('active'));
+                versusBlocks.forEach(item => item.classList.remove('versus__content--show'))
+
+                versusItems[btnIndex].classList.add('active');
+                versusBlocks[btnIndex].classList.add('versus__content--show');
+            }
+        })
+    })
+}
+
