@@ -14,48 +14,47 @@
 <body>
 <header class="header">
 	<div class="container header__container">
-		<div class="header__logo">
+		<a href="/" class="header__logo">
 			<img class="header__logo-img" src="img/logo.png" alt="hokkey">
 			<h1 class="header__logo-name">
 				Пензенская<br>
 				любительская<br>
 				хоккейная лига
 			</h1>
-		</div>
-		<button class="header__menu-toggle">Меню</button>
-		<ul class="header__menu">
-			<li class="header__menu-item">
-				<a href="/" class="header__menu-link">О лиге</a>
+		</a>
+		<button class="main-menu__toggle">Меню</button>
+		<ul class="main-menu header__menu">
+			<li class="main-menu__item header__menu-item">
+				<a href="teams.html" class="main-menu__link">О лиге</a>
 			</li>
-			<li class="header__menu-item">
-				<a href="/" class="header__menu-link">Календарь</a>
+			<li class="main-menu__item header__menu-item">
+				<a href="calendar.html" class="main-menu__link">Календарь</a>
 			</li>
-			<li class="header__menu-item">
-				<a href="/" class="header__menu-link">Турнирная таблица</a>
+			<li class="main-menu__item header__menu-item">
+				<a href="tournament.html" class="main-menu__link">Турнирная таблица</a>
 			</li>
-			<li class="header__menu-item">
-				<a href="/" class="header__menu-link">Игроки</a>
+			<li class="main-menu__item header__menu-item">
+				<a href="clubs.html" class="main-menu__link">Игроки</a>
 			</li>
-			<li class="header__menu-item">
-				<a href="/" class="header__menu-link">Новости</a>
+			<li class="main-menu__item header__menu-item">
+				<a href="news.html" class="main-menu__link">Новости</a>
 			</li>
-			<li class="header__menu-item">
-				<a href="/" class="header__menu-link">Трансляции</a>
+			<li class="main-menu__item header__menu-item">
+				<a href="stream.html" class="main-menu__link">Трансляции</a>
 			</li>
-			<li class="header__menu-item">
-				<a href="/" class="header__menu-link">Медиа</a>
+			<li class="main-menu__item header__menu-item">
+				<a href="media.html" class="main-menu__link">Медиа</a>
 			</li>
 		</ul>
 	</div>
 	<div class="container">
-		<div class="glide ticker__glide">
-			<div class="glide__arrows ticker__arrows" data-glide-el="controls">
-				<button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
-			</div>
-			<div class="glide__track ticker__track" data-glide-el="track">
-				<ul class="ticker glide__slides">
-					<li class="ticker__item glide__slide">
-						<a href="#" class="ticker__link">
+		<div class="swiper__container ticker-swiper__container">
+			<div class="swiper ticker-swiper">
+				<button class="swiper-button-prev swiper__btn ticker-swiper__btn"><</button>
+				<button class="swiper-button-next swiper__btn ticker-swiper__btn">></button>
+				<ul class="swiper-wrapper ticker-swiper__list">
+					<li class="swiper-slide ticker">
+						<a href="versus.html" class="ticker__link">
 							<div class="ticker__date">
 								<span class="ticker__number">03</span>
 								<span class="ticker__month">Сен</span>
@@ -75,8 +74,8 @@
 							</div>
 						</a>
 					</li>
-					<li class="ticker__item glide__slide">
-						<a href="#" class="ticker__link">
+					<li class="swiper-slide ticker">
+						<a href="versus.html" class="ticker__link">
 							<div class="ticker__date">
 								<span class="ticker__number">03</span>
 								<span class="ticker__month">Сен</span>
@@ -96,8 +95,8 @@
 							</div>
 						</a>
 					</li>
-					<li class="ticker__item glide__slide">
-						<a href="#" class="ticker__link">
+					<li class="swiper-slide ticker">
+						<a href="versus.html" class="ticker__link">
 							<div class="ticker__date">
 								<span class="ticker__number">03</span>
 								<span class="ticker__month">Сен</span>
@@ -117,8 +116,8 @@
 							</div>
 						</a>
 					</li>
-					<li class="ticker__item glide__slide">
-						<a href="#" class="ticker__link">
+					<li class="swiper-slide ticker">
+						<a href="versus.html" class="ticker__link">
 							<div class="ticker__date">
 								<span class="ticker__number">03</span>
 								<span class="ticker__month">Сен</span>
@@ -138,8 +137,8 @@
 							</div>
 						</a>
 					</li>
-					<li class="ticker__item glide__slide">
-						<a href="#" class="ticker__link">
+					<li class="swiper-slide ticker">
+						<a href="versus.html" class="ticker__link">
 							<div class="ticker__date">
 								<span class="ticker__number">03</span>
 								<span class="ticker__month">Сен</span>
@@ -159,8 +158,8 @@
 							</div>
 						</a>
 					</li>
-					<li class="ticker__item glide__slide">
-						<a href="#" class="ticker__link">
+					<li class="swiper-slide ticker">
+						<a href="versus.html" class="ticker__link">
 							<div class="ticker__date">
 								<span class="ticker__number">03</span>
 								<span class="ticker__month">Сен</span>
@@ -180,8 +179,8 @@
 							</div>
 						</a>
 					</li>
-					<li class="ticker__item glide__slide">
-						<a href="#" class="ticker__link">
+					<li class="swiper-slide ticker">
+						<a href="versus.html" class="ticker__link">
 							<div class="ticker__date">
 								<span class="ticker__number">03</span>
 								<span class="ticker__month">Сен</span>
@@ -201,8 +200,8 @@
 							</div>
 						</a>
 					</li>
-					<li class="ticker__item glide__slide">
-						<a href="#" class="ticker__link">
+					<li class="swiper-slide ticker">
+						<a href="versus.html" class="ticker__link">
 							<div class="ticker__date">
 								<span class="ticker__number">03</span>
 								<span class="ticker__month">Сен</span>
@@ -222,8 +221,8 @@
 							</div>
 						</a>
 					</li>
-					<li class="ticker__item glide__slide">
-						<a href="#" class="ticker__link">
+					<li class="swiper-slide ticker">
+						<a href="versus.html" class="ticker__link">
 							<div class="ticker__date">
 								<span class="ticker__number">03</span>
 								<span class="ticker__month">Сен</span>
@@ -243,8 +242,29 @@
 							</div>
 						</a>
 					</li>
-					<li class="ticker__item glide__slide">
-						<a href="#" class="ticker__link">
+					<li class="swiper-slide ticker">
+						<a href="versus.html" class="ticker__link">
+							<div class="ticker__date">
+								<span class="ticker__number">03</span>
+								<span class="ticker__month">Сен</span>
+							</div>
+							<div class="ticker__team">
+								<img src="img/ticker/team-1.png" alt="team" class="ticker__team-img">
+								<span>Фмл58</span>
+							</div>
+							<div class="ticker__score">
+								<span>0</span>
+								:
+								<span>2</span>
+							</div>
+							<div class="ticker__team">
+								<img src="img/ticker/team-1.png" alt="team" class="ticker__team-img">
+								<span>Фмл58</span>
+							</div>
+						</a>
+					</li>
+					<li class="swiper-slide ticker">
+						<a href="versus.html" class="ticker__link">
 							<div class="ticker__date">
 								<span class="ticker__number">03</span>
 								<span class="ticker__month">Сен</span>
@@ -265,9 +285,6 @@
 						</a>
 					</li>
 				</ul>
-			</div>
-			<div class="glide__arrows ticker__arrows" data-glide-el="controls">
-				<button class="glide__arrow glide__arrow--left" data-glide-dir=">">></button>
 			</div>
 		</div>
 	</div>
@@ -467,11 +484,11 @@
 </footer>
 <div class="overlay visually-hidden">
 	<div class="overlay__container">
-		<div class="popup popup--filter">
-			<div class="filters-block">
+		<div class="popup popup--filter visually-hidden">
+			<div class="popup__content">
 				<div class="popup__header">
-					<h3 class="popup__title filter__title">Фильтр</h3>
-					<button class="popup__close">Закрыть</button>
+					<h3 class="popup__title">Фильтр</h3>
+					<button class="popup__close popup__close--cross">Закрыть</button>
 				</div>
 				<ul class="filters">
 					<li class="filter">
@@ -513,9 +530,42 @@
 				<a href="#" class="section__btn section__btn--blue">Показать результат</a>
 			</div>
 		</div>
+
+		<div class="popup popup--menu visually-hidden">
+			<div class="popup__content">
+				<div class="popup__header">
+					<h3 class="popup__title">Меню</h3>
+					<button class="popup__close popup__close--cross">Закрыть</button>
+				</div>
+				<ul class="main-menu popup-menu">
+					<li class="main-menu__item popup-menu__item">
+						<a href="teams.html" class="main-menu__link popup-menu__link">О лиге</a>
+					</li>
+					<li class="main-menu__item popup-menu__item">
+						<a href="calendar.html" class="main-menu__link popup-menu__link">Календарь</a>
+					</li>
+					<li class="main-menu__item popup-menu__item">
+						<a href="tournament.html" class="main-menu__link popup-menu__link">Турнирная таблица</a>
+					</li>
+					<li class="main-menu__item popup-menu__item">
+						<a href="clubs.html" class="main-menu__link popup-menu__link">Игроки</a>
+					</li>
+					<li class="main-menu__item popup-menu__item">
+						<a href="news.html" class="main-menu__link popup-menu__link">Новости</a>
+					</li>
+					<li class="main-menu__item popup-menu__item">
+						<a href="stream.html" class="main-menu__link popup-menu__link">Трансляции</a>
+					</li>
+					<li class="main-menu__item popup-menu__item">
+						<a href="media.html" class="main-menu__link popup-menu__link">Медиа</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 </div>
-<script src="js/glide.min.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

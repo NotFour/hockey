@@ -14,48 +14,47 @@
 <body>
 <header class="header">
 	<div class="container header__container">
-		<div class="header__logo">
+		<a href="/" class="header__logo">
 			<img class="header__logo-img" src="img/logo.png" alt="hokkey">
 			<h1 class="header__logo-name">
 				Пензенская<br>
 				любительская<br>
 				хоккейная лига
 			</h1>
-		</div>
-		<button class="header__menu-toggle">Меню</button>
-		<ul class="header__menu">
-			<li class="header__menu-item">
-				<a href="/" class="header__menu-link">О лиге</a>
+		</a>
+		<button class="main-menu__toggle">Меню</button>
+		<ul class="main-menu header__menu">
+			<li class="main-menu__item header__menu-item">
+				<a href="teams.html" class="main-menu__link">О лиге</a>
 			</li>
-			<li class="header__menu-item">
-				<a href="/" class="header__menu-link">Календарь</a>
+			<li class="main-menu__item header__menu-item">
+				<a href="calendar.html" class="main-menu__link">Календарь</a>
 			</li>
-			<li class="header__menu-item">
-				<a href="/" class="header__menu-link">Турнирная таблица</a>
+			<li class="main-menu__item header__menu-item">
+				<a href="tournament.html" class="main-menu__link">Турнирная таблица</a>
 			</li>
-			<li class="header__menu-item">
-				<a href="/" class="header__menu-link">Игроки</a>
+			<li class="main-menu__item header__menu-item">
+				<a href="clubs.html" class="main-menu__link">Игроки</a>
 			</li>
-			<li class="header__menu-item">
-				<a href="/" class="header__menu-link">Новости</a>
+			<li class="main-menu__item header__menu-item">
+				<a href="news.html" class="main-menu__link">Новости</a>
 			</li>
-			<li class="header__menu-item">
-				<a href="/" class="header__menu-link">Трансляции</a>
+			<li class="main-menu__item header__menu-item">
+				<a href="stream.html" class="main-menu__link">Трансляции</a>
 			</li>
-			<li class="header__menu-item">
-				<a href="/" class="header__menu-link">Медиа</a>
+			<li class="main-menu__item header__menu-item">
+				<a href="media.html" class="main-menu__link">Медиа</a>
 			</li>
 		</ul>
 	</div>
 	<div class="container">
-		<div class="glide ticker__glide">
-			<div class="glide__arrows ticker__arrows" data-glide-el="controls">
-				<button class="glide__arrow glide__arrow--left" data-glide-dir="<"><</button>
-			</div>
-			<div class="glide__track ticker__track" data-glide-el="track">
-				<ul class="ticker glide__slides">
-					<li class="ticker__item glide__slide">
-						<a href="#" class="ticker__link">
+		<div class="swiper__container ticker-swiper__container">
+			<div class="swiper ticker-swiper">
+				<button class="swiper-button-prev swiper__btn ticker-swiper__btn"><</button>
+				<button class="swiper-button-next swiper__btn ticker-swiper__btn">></button>
+				<ul class="swiper-wrapper ticker-swiper__list">
+					<li class="swiper-slide ticker">
+						<a href="versus.html" class="ticker__link">
 							<div class="ticker__date">
 								<span class="ticker__number">03</span>
 								<span class="ticker__month">Сен</span>
@@ -75,8 +74,8 @@
 							</div>
 						</a>
 					</li>
-					<li class="ticker__item glide__slide">
-						<a href="#" class="ticker__link">
+					<li class="swiper-slide ticker">
+						<a href="versus.html" class="ticker__link">
 							<div class="ticker__date">
 								<span class="ticker__number">03</span>
 								<span class="ticker__month">Сен</span>
@@ -96,8 +95,8 @@
 							</div>
 						</a>
 					</li>
-					<li class="ticker__item glide__slide">
-						<a href="#" class="ticker__link">
+					<li class="swiper-slide ticker">
+						<a href="versus.html" class="ticker__link">
 							<div class="ticker__date">
 								<span class="ticker__number">03</span>
 								<span class="ticker__month">Сен</span>
@@ -117,8 +116,8 @@
 							</div>
 						</a>
 					</li>
-					<li class="ticker__item glide__slide">
-						<a href="#" class="ticker__link">
+					<li class="swiper-slide ticker">
+						<a href="versus.html" class="ticker__link">
 							<div class="ticker__date">
 								<span class="ticker__number">03</span>
 								<span class="ticker__month">Сен</span>
@@ -138,8 +137,8 @@
 							</div>
 						</a>
 					</li>
-					<li class="ticker__item glide__slide">
-						<a href="#" class="ticker__link">
+					<li class="swiper-slide ticker">
+						<a href="versus.html" class="ticker__link">
 							<div class="ticker__date">
 								<span class="ticker__number">03</span>
 								<span class="ticker__month">Сен</span>
@@ -159,8 +158,8 @@
 							</div>
 						</a>
 					</li>
-					<li class="ticker__item glide__slide">
-						<a href="#" class="ticker__link">
+					<li class="swiper-slide ticker">
+						<a href="versus.html" class="ticker__link">
 							<div class="ticker__date">
 								<span class="ticker__number">03</span>
 								<span class="ticker__month">Сен</span>
@@ -180,8 +179,8 @@
 							</div>
 						</a>
 					</li>
-					<li class="ticker__item glide__slide">
-						<a href="#" class="ticker__link">
+					<li class="swiper-slide ticker">
+						<a href="versus.html" class="ticker__link">
 							<div class="ticker__date">
 								<span class="ticker__number">03</span>
 								<span class="ticker__month">Сен</span>
@@ -201,8 +200,8 @@
 							</div>
 						</a>
 					</li>
-					<li class="ticker__item glide__slide">
-						<a href="#" class="ticker__link">
+					<li class="swiper-slide ticker">
+						<a href="versus.html" class="ticker__link">
 							<div class="ticker__date">
 								<span class="ticker__number">03</span>
 								<span class="ticker__month">Сен</span>
@@ -222,8 +221,8 @@
 							</div>
 						</a>
 					</li>
-					<li class="ticker__item glide__slide">
-						<a href="#" class="ticker__link">
+					<li class="swiper-slide ticker">
+						<a href="versus.html" class="ticker__link">
 							<div class="ticker__date">
 								<span class="ticker__number">03</span>
 								<span class="ticker__month">Сен</span>
@@ -243,8 +242,29 @@
 							</div>
 						</a>
 					</li>
-					<li class="ticker__item glide__slide">
-						<a href="#" class="ticker__link">
+					<li class="swiper-slide ticker">
+						<a href="versus.html" class="ticker__link">
+							<div class="ticker__date">
+								<span class="ticker__number">03</span>
+								<span class="ticker__month">Сен</span>
+							</div>
+							<div class="ticker__team">
+								<img src="img/ticker/team-1.png" alt="team" class="ticker__team-img">
+								<span>Фмл58</span>
+							</div>
+							<div class="ticker__score">
+								<span>0</span>
+								:
+								<span>2</span>
+							</div>
+							<div class="ticker__team">
+								<img src="img/ticker/team-1.png" alt="team" class="ticker__team-img">
+								<span>Фмл58</span>
+							</div>
+						</a>
+					</li>
+					<li class="swiper-slide ticker">
+						<a href="versus.html" class="ticker__link">
 							<div class="ticker__date">
 								<span class="ticker__number">03</span>
 								<span class="ticker__month">Сен</span>
@@ -265,9 +285,6 @@
 						</a>
 					</li>
 				</ul>
-			</div>
-			<div class="glide__arrows ticker__arrows" data-glide-el="controls">
-				<button class="glide__arrow glide__arrow--left" data-glide-dir=">">></button>
 			</div>
 		</div>
 	</div>
@@ -280,37 +297,43 @@
 					Чемпионат ПЛХЛ<br>
 					2021–2022
 				</h2>
-				<a href="#" class="section__btn only-desktop">Открыть таблицу</a>
+				<a href="tournament.html" class="section__btn only-desktop">Открыть таблицу</a>
 			</div>
 			<div class="section__column">
-				<ul class="leagues competition__leagues">
-					<li class="league active">
-						<a href="#" class="league__link">
-							Лига «А»
-						</a>
-					</li>
-					<li class="league">
-						<a href="#" class="league__link">
-							Лига «B»
-						</a>
-					</li>
-					<li class="league">
-						<a href="#" class="league__link">
-							Лига «C»
-						</a>
-					</li>
-					<li class="league">
-						<a href="#" class="league__link">
-							Лига «D»
-						</a>
-					</li>
-					<li class="league">
-						<a href="#" class="league__link">
-							Лига «E»
-						</a>
-					</li>
-				</ul>
-				<ul class="tournament tournament--small">
+				<div class="swiper__container switchers">
+					<div id="champions" class="swiper switcher-swiper">
+						<button class="swiper-button-prev swiper__btn"><</button>
+						<button class="swiper-button-next swiper__btn">></button>
+						<ul class="swiper-wrapper leagues">
+							<li class="swiper-slide switcher league active">
+								<button class="switcher__btn league__btn">
+									Лига «А»
+								</button>
+							</li>
+							<li class="swiper-slide switcher league">
+								<button class="switcher__btn league__btn">
+									Лига «B»
+								</button>
+							</li>
+							<li class="swiper-slide switcher league">
+								<button class="switcher__btn league__btn">
+									Лига «C»
+								</button>
+							</li>
+							<li class="swiper-slide switcher league">
+								<button class="switcher__btn league__btn">
+									Лига «D»
+								</button>
+							</li>
+							<li class="swiper-slide switcher league">
+								<button class="switcher__btn league__btn">
+									Лига «E»
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<ul class="switcher__content tournament tournament--small">
 					<li class="tournament__item">
 						<div class="tournament__content">
                             <span class="tournament__number">
@@ -616,38 +639,528 @@
 						</div>
 					</li>
 				</ul>
-				<a href="#" class="section__btn only-mobile">Открыть таблицу</a>
+				<ul class="switcher__content tournament tournament--small visually-hidden">
+					<li class="tournament__item">
+						<div class="tournament__content">
+                            <span class="tournament__number">
+                                1
+                            </span>
+							<img class="tournament__img" src="img/competition/comp-1.png" alt="comp">
+							<span class="tournament__name">Старт</span>
+							<ul class="tournament__attrs">
+								<li class="tournament__attr">
+									<span class="tournament__attr-name">
+										И
+									</span>
+									<span class="tournament__attr-score">
+										0
+									</span>
+								</li>
+								<li class="tournament__attr">
+									<span class="tournament__attr-name">
+										В
+									</span>
+									<span class="tournament__attr-score">
+										0
+									</span>
+								</li>
+								<li class="tournament__attr">
+									<span class="tournament__attr-name">
+										ВБ
+									</span>
+									<span class="tournament__attr-score">
+										0
+									</span>
+								</li>
+								<li class="tournament__attr">
+									<span class="tournament__attr-name">
+										пб
+									</span>
+									<span class="tournament__attr-score">
+										0
+									</span>
+								</li>
+								<li class="tournament__attr">
+									<span class="tournament__attr-name">
+										П
+									</span>
+									<span class="tournament__attr-score">
+										0
+									</span>
+								</li>
+								<li class="tournament__attr">
+									<span class="tournament__attr-name">
+										Н
+									</span>
+									<span class="tournament__attr-score">
+										0
+									</span>
+								</li>
+								<li class="tournament__attr">
+									<span class="tournament__attr-name">
+										ЗШ
+									</span>
+									<span class="tournament__attr-score">
+										0
+									</span>
+								</li>
+								<li class="tournament__attr">
+									<span class="tournament__attr-name">
+										ПШ
+									</span>
+									<span class="tournament__attr-score">
+										0
+									</span>
+								</li>
+							</ul>
+							<span class="tournament__score">25</span>
+						</div>
+					</li>
+					<li class="tournament__item">
+						<div class="tournament__content">
+                            <span class="tournament__number">
+                                2
+                            </span>
+							<img class="tournament__img" src="img/competition/comp-2.png" alt="comp">
+							<span class="tournament__name">Сплхл</span>
+							<ul class="tournament__attrs">
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    И
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    В
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    ВБ
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    пб
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    П
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    Н
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    ЗШ
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    ПШ
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+							</ul>
+							<span class="tournament__score">25</span>
+						</div>
+					</li>
+				</ul>
+				<ul class="switcher__content tournament tournament--small visually-hidden">
+					<li class="tournament__item">
+						<div class="tournament__content">
+                            <span class="tournament__number">
+                                1
+                            </span>
+							<img class="tournament__img" src="img/competition/comp-1.png" alt="comp">
+							<span class="tournament__name">Старт</span>
+							<ul class="tournament__attrs">
+								<li class="tournament__attr">
+									<span class="tournament__attr-name">
+										И
+									</span>
+									<span class="tournament__attr-score">
+										0
+									</span>
+								</li>
+								<li class="tournament__attr">
+									<span class="tournament__attr-name">
+										В
+									</span>
+									<span class="tournament__attr-score">
+										0
+									</span>
+								</li>
+								<li class="tournament__attr">
+									<span class="tournament__attr-name">
+										ВБ
+									</span>
+									<span class="tournament__attr-score">
+										0
+									</span>
+								</li>
+								<li class="tournament__attr">
+									<span class="tournament__attr-name">
+										пб
+									</span>
+									<span class="tournament__attr-score">
+										0
+									</span>
+								</li>
+								<li class="tournament__attr">
+									<span class="tournament__attr-name">
+										П
+									</span>
+									<span class="tournament__attr-score">
+										0
+									</span>
+								</li>
+								<li class="tournament__attr">
+									<span class="tournament__attr-name">
+										Н
+									</span>
+									<span class="tournament__attr-score">
+										0
+									</span>
+								</li>
+								<li class="tournament__attr">
+									<span class="tournament__attr-name">
+										ЗШ
+									</span>
+									<span class="tournament__attr-score">
+										0
+									</span>
+								</li>
+								<li class="tournament__attr">
+									<span class="tournament__attr-name">
+										ПШ
+									</span>
+									<span class="tournament__attr-score">
+										0
+									</span>
+								</li>
+							</ul>
+							<span class="tournament__score">25</span>
+						</div>
+					</li>
+					<li class="tournament__item">
+						<div class="tournament__content">
+                            <span class="tournament__number">
+                                2
+                            </span>
+							<img class="tournament__img" src="img/competition/comp-2.png" alt="comp">
+							<span class="tournament__name">Сплхл</span>
+							<ul class="tournament__attrs">
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    И
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    В
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    ВБ
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    пб
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    П
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    Н
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    ЗШ
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    ПШ
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+							</ul>
+							<span class="tournament__score">25</span>
+						</div>
+					</li>
+					<li class="tournament__item">
+						<div class="tournament__content">
+                            <span class="tournament__number">
+                                3
+                            </span>
+							<img class="tournament__img" src="img/competition/comp-3.png" alt="comp">
+							<span class="tournament__name">МЛН</span>
+							<ul class="tournament__attrs">
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    И
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    В
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    ВБ
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    пб
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    П
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    Н
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    ЗШ
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    ПШ
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+							</ul>
+							<span class="tournament__score">25</span>
+						</div>
+					</li>
+					<li class="tournament__item">
+						<div class="tournament__content">
+                            <span class="tournament__number">
+                                4
+                            </span>
+							<img class="tournament__img" src="img/competition/comp-4.png" alt="comp">
+							<span class="tournament__name">ВЛНй</span>
+							<ul class="tournament__attrs">
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    И
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    В
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    ВБ
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    пб
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    П
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    Н
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    ЗШ
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+								<li class="tournament__attr">
+                                <span class="tournament__attr-name">
+                                    ПШ
+                                </span>
+									<span class="tournament__attr-score">
+                                    0
+                                </span>
+								</li>
+							</ul>
+							<span class="tournament__score">25</span>
+						</div>
+					</li>
+				</ul>
+				<a href="tournament.html" class="section__btn only-mobile">Открыть таблицу</a>
 			</div>
 		</div>
 	</section>
-
 	<section class="top-players">
 		<div class="container section__container">
 			<div>
 				<h2 class="section__title top-players__title">
 					Лучшие игроки
 				</h2>
-				<a href="#" class="section__btn only-desktop">Открыть таблицу</a>
+				<a href="clubs.html" class="section__btn only-desktop">Открыть таблицу</a>
 			</div>
 			<div class="section__column">
-				<ul class="leagues competition__leagues">
-					<li class="league active">
-						<a href="#" class="league__link">
-							Лига «А»
-						</a>
-					</li>
-					<li class="league">
-						<a href="#" class="league__link">
-							Лига «B»
-						</a>
-					</li>
-					<li class="league">
-						<a href="#" class="league__link">
-							Лига «C»
-						</a>
-					</li>
-				</ul>
-				<ul class="top-players__list">
+				<div class="swiper__container switchers">
+					<div id="best-players" class="swiper switcher-swiper">
+						<button class="swiper-button-prev swiper__btn"><</button>
+						<button class="swiper-button-next swiper__btn">></button>
+						<ul class="swiper-wrapper leagues">
+							<li class="swiper-slide switcher league active">
+								<button class="switcher__btn league__btn">
+									Лига «А»
+								</button>
+							</li>
+							<li class="swiper-slide switcher league">
+								<button class="switcher__btn league__btn">
+									Лига «B»
+								</button>
+							</li>
+							<li class="swiper-slide switcher league">
+								<button class="switcher__btn league__btn">
+									Лига «C»
+								</button>
+							</li>
+							<li class="swiper-slide switcher league">
+								<button class="switcher__btn league__btn">
+									Лига «C»
+								</button>
+							</li>
+							<li class="swiper-slide switcher league">
+								<button class="switcher__btn league__btn">
+									Лига «C»
+								</button>
+							</li>
+							<li class="swiper-slide switcher league">
+								<button class="switcher__btn league__btn">
+									Лига «C»
+								</button>
+							</li>
+							<li class="swiper-slide switcher league">
+								<button class="switcher__btn league__btn">
+									Лига «C»
+								</button>
+							</li>
+							<li class="swiper-slide switcher league">
+								<button class="switcher__btn league__btn">
+									Лига «C»
+								</button>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<ul class="switcher__content top-players__list">
 					<li class="top-player">
 						<a href="#" class="top-player__link">
 							<div>
@@ -737,52 +1250,86 @@
 						</a>
 					</li>
 				</ul>
-				<a href="#" class="section__btn only-mobile">Открыть таблицу</a>
+				<ul class="switcher__content top-players__list visually-hidden">
+					<li class="top-player">
+						<a href="#" class="top-player__link">
+							<div>
+								<div class="top-player__header">
+									<img src="img/top-player/player-1.png" alt="player" class="top-player__photo">
+									<div>
+										<span class="top-player__name">Буйдин</span>
+										<span class="top-player__name">александр</span>
+									</div>
+								</div>
+								<ul class="tags tags--middle tags--separated">
+									<li class="tag">#5</li>
+									<li class="tag">СУРА</li>
+									<li class="tag">Вратарь</li>
+								</ul>
+							</div>
+							<div>
+								<span class="top-player__label">Всего очков</span>
+								<span class="top-player__score">25</span>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<a href="clubs.html" class="section__btn only-mobile">Открыть таблицу</a>
 			</div>
 		</div>
 	</section>
-
-
-	<section class="stream">
+	<section class="stream-section">
 		<div class="container section__container">
 			<div>
-				<h2 class="section__title stream__title">
+				<h2 class="section__title stream-section__title">
 					Трансляции
 				</h2>
 				<a href="#" class="section__btn only-desktop">Все трансляции</a>
 			</div>
 			<div class="section__column">
-				<div class="glide stream__glide">
-					<div class="glide__track stream__track" data-glide-el="track">
-						<ul class="stream-list glide__slides">
-							<li class="stream-list__item glide__slide">
-								<a href="#" class="stream-list__link">
-									<div class="stream-list__img-box">
-										<img src="img/stream/stream-1.jpg" alt="stream" class="stream-list__img">
-										<span class="stream-list__date">03.10.21</span>
+				<div class="swiper__container">
+					<div class="swiper stream-swiper">
+						<button class="swiper-button-prev swiper__btn"><</button>
+						<button class="swiper-button-next swiper__btn">></button>
+						<ul class="swiper-wrapper stream-swiper__list">
+							<li class="swiper-slide stream">
+								<a href="#" class="stream__link">
+									<div class="stream__img-box">
+										<img src="img/stream/stream-1.jpg" alt="stream" class="stream__img">
+										<span class="stream__date">03.10.21</span>
 									</div>
-									<span class="stream-list__name">Проект "Шайба"</span>
-									<span class="stream-list__desc">Выпуск №1, сезон 2021 / 2022</span>
+									<span class="stream__name">Проект "Шайба"</span>
+									<span class="stream__desc">Выпуск №1, сезон 2021 / 2022</span>
 								</a>
 							</li>
-							<li class="stream-list__item glide__slide">
-								<a href="#" class="stream-list__link">
-									<div class="stream-list__img-box">
-										<img src="img/stream/stream-1.jpg" alt="stream" class="stream-list__img">
-										<span class="stream-list__date">03.10.21</span>
+							<li class="swiper-slide stream">
+								<a href="#" class="stream__link">
+									<div class="stream__img-box">
+										<img src="img/stream/stream-1.jpg" alt="stream" class="stream__img">
+										<span class="stream__date">03.10.21</span>
 									</div>
-									<span class="stream-list__name">Проект "Шайба"</span>
-									<span class="stream-list__desc">Выпуск №1, сезон 2021 / 2022</span>
+									<span class="stream__name">Проект "Шайба"</span>
+									<span class="stream__desc">Выпуск №1, сезон 2021 / 2022</span>
 								</a>
 							</li>
-							<li class="stream-list__item glide__slide">
-								<a href="#" class="stream-list__link">
-									<div class="stream-list__img-box">
-										<img src="img/stream/stream-1.jpg" alt="stream" class="stream-list__img">
-										<span class="stream-list__date">03.10.21</span>
+							<li class="swiper-slide stream">
+								<a href="#" class="stream__link">
+									<div class="stream__img-box">
+										<img src="img/stream/stream-1.jpg" alt="stream" class="stream__img">
+										<span class="stream__date">03.10.21</span>
 									</div>
-									<span class="stream-list__name">Проект "Шайба"</span>
-									<span class="stream-list__desc">Выпуск №1, сезон 2021 / 2022</span>
+									<span class="stream__name">Проект "Шайба"</span>
+									<span class="stream__desc">Выпуск №1, сезон 2021 / 2022</span>
+								</a>
+							</li>
+							<li class="swiper-slide stream">
+								<a href="#" class="stream__link">
+									<div class="stream__img-box">
+										<img src="img/stream/stream-1.jpg" alt="stream" class="stream__img">
+										<span class="stream__date">03.10.21</span>
+									</div>
+									<span class="stream__name">Проект "Шайба"</span>
+									<span class="stream__desc">Выпуск №1, сезон 2021 / 2022</span>
 								</a>
 							</li>
 						</ul>
@@ -791,15 +1338,13 @@
 			</div>
 		</div>
 	</section>
-
-
 	<section class="news">
 		<div class="container section__container">
 			<div>
 				<h2 class="section__title news__title">
 					Новости
 				</h2>
-				<a href="#" class="section__btn only-desktop">Все трансляции</a>
+				<a href="#" class="section__btn only-desktop">Все новости</a>
 			</div>
 			<div class="section__column">
 				<ul class="news-list">
@@ -835,8 +1380,6 @@
 			</div>
 		</div>
 	</section>
-
-
 </main>
 <footer class="footer">
 	<div class="container footer__container">
@@ -923,7 +1466,43 @@
 		</div>
 	</section>
 </footer>
-<script src="js/glide.min.js"></script>
+<div class="overlay visually-hidden">
+	<div class="overlay__container">
+		<div class="popup popup--menu visually-hidden">
+			<div class="popup__content">
+				<div class="popup__header">
+					<h3 class="popup__title">Меню</h3>
+					<button class="popup__close popup__close--cross">Закрыть</button>
+				</div>
+				<ul class="main-menu popup-menu">
+					<li class="main-menu__item popup-menu__item">
+						<a href="teams.html" class="main-menu__link popup-menu__link">О лиге</a>
+					</li>
+					<li class="main-menu__item popup-menu__item">
+						<a href="calendar.html" class="main-menu__link popup-menu__link">Календарь</a>
+					</li>
+					<li class="main-menu__item popup-menu__item">
+						<a href="tournament.html" class="main-menu__link popup-menu__link">Турнирная таблица</a>
+					</li>
+					<li class="main-menu__item popup-menu__item">
+						<a href="clubs.html" class="main-menu__link popup-menu__link">Игроки</a>
+					</li>
+					<li class="main-menu__item popup-menu__item">
+						<a href="news.html" class="main-menu__link popup-menu__link">Новости</a>
+					</li>
+					<li class="main-menu__item popup-menu__item">
+						<a href="stream.html" class="main-menu__link popup-menu__link">Трансляции</a>
+					</li>
+					<li class="main-menu__item popup-menu__item">
+						<a href="media.html" class="main-menu__link popup-menu__link">Медиа</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

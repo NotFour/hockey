@@ -1,108 +1,127 @@
-let resizeTimeoutId;
-const tickerElem = document.querySelector('.ticker__track');
-const streamElem = document.querySelector('.stream__track');
-let tickerGlide;
-let streamGlide;
+const tickerSliderElem = $('.ticker-swiper');
+let tickerSliderObj;
 
-if (tickerElem || streamElem) {
-    window.addEventListener('resize', function(){
-        window_resize();
-        return false;
+const streamSliderElem = $('.stream-swiper');
+let streamSliderObj;
+
+const switcherSliderElems = $('.switcher-swiper');
+let switcherSliderObjects = [];
+
+if (tickerSliderElem.length) {
+    tickerSliderObj = new Swiper('.ticker-swiper', {
+        slidesPerView: 'auto',
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        speed: 1000
     });
 }
 
-function window_resize() {
-    clearTimeout(resizeTimeoutId);
-    resizeTimeoutId = setTimeout(() => {
-        if (tickerElem) {
-            refreshTickerGlide();
-        }
-
-        if (streamElem) {
-            refreshStreamGlide();
-        }
-    }, 1000);
-}
-
-function refreshTickerGlide(){
-    tickerGlide.update({ perView: getTickersPerView() });
-}
-
-function getTickersPerView() {
-    const containerWidth = tickerElem.clientWidth;
-    const elemWidth = 224;
-    return Math.floor( containerWidth / elemWidth * 100) / 100;
-}
-
-function refreshStreamGlide(){
-    streamGlide.update({ perView: getStreamPerView() });
-}
-
-function getStreamPerView() {
-    const containerWidth = streamElem.clientWidth;
-    const elemWidth = Number(window.getComputedStyle(document.querySelector('.stream-list__img')).minWidth.slice(0, -2)) + 16; //gap
-    return Math.floor( containerWidth / elemWidth * 100) / 100;
-}
-
-if (tickerElem) {
-    tickerGlide = new Glide('.ticker__glide', {
-        type: 'slider',
-        gap: 12,
-        perView: getTickersPerView(),
-        bound: true,
-        autoplay: 3000,
-        animationDuration: 1000,
-    }).mount();
-}
-
-if (streamElem) {
-    streamGlide = new Glide('.stream__glide', {
-        type: 'slider',
-        gap: 12,
-        perView: getStreamPerView(),
-        bound: true,
-        autoplay: 3000,
-        animationDuration: 1000,
-    }).mount();
-}
-
-const filterBtn = document.querySelector('.filter-btn');
-const closePopup = document.querySelector('.popup__close');
-const overlay = document.querySelector('.overlay');
-
-if (filterBtn) {
-    filterBtn.addEventListener('click', () => {
-        overlay.classList.remove('visually-hidden');
-        document.body.classList.add('no-scroll');
+if (streamSliderElem.length) {
+    streamSliderObj = new Swiper('.stream-swiper', {
+        slidesPerView: 'auto',
+        autoplay: {
+            delay: 3000,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        speed: 1000
     });
 }
 
-if (closePopup) {
-    closePopup.addEventListener('click', () => {
-        overlay.classList.add('visually-hidden');
-        document.body.classList.remove('no-scroll');
-    });
-}
-
-const versusItems = document.querySelectorAll('.versus-menu__item');
-const versusBtns = document.querySelectorAll('.versus-menu__btn');
-const versusBlocks = document.querySelectorAll('.versus__content');
-
-if (versusBtns.length) {
-    versusBtns.forEach((btn) => {
-        btn.addEventListener('click', (event) => {
-            const currentBtn = event.currentTarget;
-
-            if (!currentBtn.parentElement.classList.contains('active')) {
-                const btnIndex = Array.from(versusBtns).indexOf(currentBtn);
-
-                versusItems.forEach(item => item.classList.remove('active'));
-                versusBlocks.forEach(item => item.classList.remove('versus__content--show'))
-
-                versusItems[btnIndex].classList.add('active');
-                versusBlocks[btnIndex].classList.add('versus__content--show');
-            }
+switcherSliderElems.each(function() {
+    switcherSliderObjects.push(
+        new Swiper(`#${$( this ).attr('id')}.switcher-swiper`, {
+            slidesPerView: 'auto',
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            speed: 1000,
         })
-    })
+    );
+})
+
+function showPopup(popup) {
+    $(document.body).addClass('no-scroll');
+    $(document).on('mousedown', popupUnFocus);
+    popup.removeClass('visually-hidden');
+    overlay.removeClass('visually-hidden');
 }
 
+function closePopup() {
+    allPopups.each(function() {
+        $( this ).addClass('visually-hidden');
+    })
+    overlay.addClass('visually-hidden');
+    $(document).off('mousedown', popupUnFocus);
+    $(document.body).removeClass('no-scroll');
+}
+
+function popupUnFocus(e) {
+    if(e.target.closest('.popup:not(.visually-hidden)') === null){
+        closePopup();
+    }
+}
+
+const overlay = $('.overlay');
+const filterBtn = $('.filter-btn');
+const menuBtn = $('.main-menu__toggle');
+const switcherBlocks = $('.switchers');
+
+const allPopups = $('.popup', overlay);
+const filterPopup = $('.popup--filter', overlay);
+const menuPopup = $('.popup--menu', overlay);
+
+const closePopupBtn = $('.popup__close', overlay);
+
+if (filterBtn.length) {
+    filterBtn.on('click', () => {
+        showPopup(filterPopup);
+    });
+}
+
+if (menuBtn.length) {
+    menuBtn.on('click', () => {
+        showPopup(menuPopup);
+    });
+}
+
+closePopupBtn.each(function() {
+    $( this ).on('click', closePopup);
+});
+
+if (switcherBlocks.length) {
+    switcherBlocks.each(function() {
+        const switchersList = $( this );
+        const switcherItems = $('.switcher', switchersList);
+        const switcherBtns = $('.switcher__btn', switchersList);
+        const tournaments = $(`.switcher__content`, switchersList.parent());
+
+        if (switcherBtns.length) {
+            switcherBtns.each(function() {
+                $( this ).on('click', (event) => {
+                    const currentBtn = $(event.currentTarget);
+
+                    if (!currentBtn.parent().hasClass('active')) {
+                        const btnIndex = switcherBtns.index(currentBtn);
+                        switcherItems.each(function(){
+                            $( this ).removeClass('active');
+                        });
+                        tournaments.each(function(){
+                            $( this ).addClass('visually-hidden');
+                        });
+
+                        $(switcherItems[btnIndex]).addClass('active');
+                        if (tournaments[btnIndex]) {
+                            $(tournaments[btnIndex]).removeClass('visually-hidden');
+                        }
+                    }
+                })
+            });
+        }
+    });
+}

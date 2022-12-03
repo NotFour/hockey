@@ -14,36 +14,36 @@
 <body>
 <header class="header">
 	<div class="container header__container">
-		<div class="header__logo">
+		<a href="/" class="header__logo">
 			<img class="header__logo-img" src="img/logo.png" alt="hokkey">
 			<h1 class="header__logo-name">
 				Пензенская<br>
 				любительская<br>
 				хоккейная лига
 			</h1>
-		</div>
-		<button class="header__menu-toggle">Меню</button>
-		<ul class="header__menu">
-			<li class="header__menu-item">
-				<a href="/" class="header__menu-link">О лиге</a>
+		</a>
+		<button class="main-menu__toggle">Меню</button>
+		<ul class="main-menu header__menu">
+			<li class="main-menu__item header__menu-item">
+				<a href="teams.html" class="main-menu__link">О лиге</a>
 			</li>
-			<li class="header__menu-item">
-				<a href="/" class="header__menu-link">Календарь</a>
+			<li class="main-menu__item header__menu-item">
+				<a href="calendar.html" class="main-menu__link">Календарь</a>
 			</li>
-			<li class="header__menu-item">
-				<a href="/" class="header__menu-link">Турнирная таблица</a>
+			<li class="main-menu__item header__menu-item">
+				<a href="tournament.html" class="main-menu__link">Турнирная таблица</a>
 			</li>
-			<li class="header__menu-item">
-				<a href="/" class="header__menu-link">Игроки</a>
+			<li class="main-menu__item header__menu-item">
+				<a href="clubs.html" class="main-menu__link">Игроки</a>
 			</li>
-			<li class="header__menu-item">
-				<a href="/" class="header__menu-link">Новости</a>
+			<li class="main-menu__item header__menu-item">
+				<a href="news.html" class="main-menu__link">Новости</a>
 			</li>
-			<li class="header__menu-item">
-				<a href="/" class="header__menu-link">Трансляции</a>
+			<li class="main-menu__item header__menu-item">
+				<a href="stream.html" class="main-menu__link">Трансляции</a>
 			</li>
-			<li class="header__menu-item">
-				<a href="/" class="header__menu-link">Медиа</a>
+			<li class="main-menu__item header__menu-item">
+				<a href="media.html" class="main-menu__link">Медиа</a>
 			</li>
 		</ul>
 	</div>
@@ -144,6 +144,42 @@
 		</div>
 	</section>
 </footer>
+<div class="overlay visually-hidden">
+	<div class="overlay__container">
+		<div class="popup popup--menu visually-hidden">
+			<div class="popup__content">
+				<div class="popup__header">
+					<h3 class="popup__title">Меню</h3>
+					<button class="popup__close popup__close--cross">Закрыть</button>
+				</div>
+				<ul class="main-menu popup-menu">
+					<li class="main-menu__item popup-menu__item">
+						<a href="teams.html" class="main-menu__link popup-menu__link">О лиге</a>
+					</li>
+					<li class="main-menu__item popup-menu__item">
+						<a href="calendar.html" class="main-menu__link popup-menu__link">Календарь</a>
+					</li>
+					<li class="main-menu__item popup-menu__item">
+						<a href="tournament.html" class="main-menu__link popup-menu__link">Турнирная таблица</a>
+					</li>
+					<li class="main-menu__item popup-menu__item">
+						<a href="clubs.html" class="main-menu__link popup-menu__link">Игроки</a>
+					</li>
+					<li class="main-menu__item popup-menu__item">
+						<a href="news.html" class="main-menu__link popup-menu__link">Новости</a>
+					</li>
+					<li class="main-menu__item popup-menu__item">
+						<a href="stream.html" class="main-menu__link popup-menu__link">Трансляции</a>
+					</li>
+					<li class="main-menu__item popup-menu__item">
+						<a href="media.html" class="main-menu__link popup-menu__link">Медиа</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/jquery.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
